@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: var(--color-primary-400);
+}
+
+.input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary-600);
+  font-size: 0.95rem;
+}
+
+.input::placeholder {
+  color: #bdbdbd;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+}
+
+.error {
+  border-color: #fff;
+}
+
+.errorMessage {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #ef4444;
+}

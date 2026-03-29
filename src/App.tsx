@@ -1,35 +1,30 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useContext } from "react";
 
-import { AuthContext } from "./auth/authContext";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
+import { PublicRoute } from "./auth/PublicRoute";
+import "./styles/index.css";
+
 import { Login } from "./pages/Login";
-import { Dashboard } from "./pages/Dashboard";
 import { Register } from "./pages/Register";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
-  const auth = useContext(AuthContext);
-
   return (
     <Routes>
       <Route
         path="/login"
         element={
-          auth?.isAuthenticated ? (
-            <Navigate to="/dashboard" replace />
-          ) : (
+          <PublicRoute>
             <Login />
-          )
+          </PublicRoute>
         }
       />
       <Route
         path="/register"
         element={
-          auth?.isAuthenticated ? (
-            <Navigate to="/dashboard" replace />
-          ) : (
+          <PublicRoute>
             <Register />
-          )
+          </PublicRoute>
         }
       />
 
@@ -41,6 +36,8 @@ function App() {
           </ProtectedRoute>
         }
       />
+
+      <Route path="/" element={<Navigate to="/dashboard" replace />} />
     </Routes>
   );
 }

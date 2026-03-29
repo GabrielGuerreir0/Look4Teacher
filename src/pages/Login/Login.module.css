@@ -1,0 +1,62 @@
+.background {
+  min-height: 100vh;
+  background: linear-gradient(
+    to top,
+    var(--color-primary-700),
+    var(--color-primary-400)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: linear-gradient(
+    to top,
+    var(--color-primary-700),
+    var(--color-primary-600)
+  );
+
+  display: flex;
+}
+.contentForm {
+  padding: 1rem;
+}
+.logo {
+  width: auto;
+  height: 16rem;
+}
+.title {
+  color: var(--color-primary-500);
+  font-size: 2rem;
+}
+.button {
+  background-color: var(--color-primary-500);
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: large;
+}
+.contentPlaneta {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.planeta {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contentPlaneta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(243, 159, 90, 0.3);
+  pointer-events: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

@@ -1,0 +1,21 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+:root {
+  --color-primary-900: #1d1a39;
+  --color-primary-800: #451952;
+  --color-primary-700: #662549;
+  --color-primary-600: #ae445a;
+  --color-primary-500: #f39f5a;
+  --color-primary-400: #e8bcb9;
+}
