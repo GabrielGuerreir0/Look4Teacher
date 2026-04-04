@@ -1,3 +1,4 @@
+// src/pages/Login.tsx
 import { useContext } from "react";
 import { AuthContext } from "../../auth/authContext";
 import { useNavigate } from "react-router-dom";
@@ -16,28 +17,43 @@ export function Login() {
   return (
     <div className={styles.background}>
       <div className={styles.content}>
-        <div className={styles.contentForm}>
-          <img
-            className={styles.logo}
-            src="./src/assets/L4T_logo.png"
-            alt="Logo L4T"
-          />
-          <h1 className={styles.title}>Bem-vindo de volta</h1>
-          <p className={styles.subtitle}>Faça login para continuar</p>
+        {/* LADO ESQUERDO – FORMULÁRIO HOLOGRÁFICO */}
+        <div className={styles.formSide}>
+          <div className={styles.logoContainer}>
+            <img
+              className={styles.logo}
+              src="./src/assets/L4T_logo.png"
+              alt="Logo L4T"
+            />
+          </div>
 
-          <Input type="email" placeholder="Seu email" />
-          <Input type="password" placeholder="Sua senha" />
+          <h1 className={styles.title}>Entre no universo</h1>
+          <p className={styles.subtitle}>Acesse sua conta L4T Idiomas</p>
 
-          <button className={styles.button} onClick={handleLogin}>
-            Entrar
-          </button>
+          <div className={styles.form}>
+            <Input type="email" placeholder="Seu email" />
+            <Input type="password" placeholder="Sua senha" />
+
+            <button className={styles.button} onClick={handleLogin}>
+              ATIVAR PORTAL
+            </button>
+          </div>
+
+          <p className={styles.forgot}>
+            Esqueceu a senha? <span>Recuperar</span>
+          </p>
         </div>
-        <div className={styles.contentPlaneta}>
+
+        {/* LADO DIREITO – PLANETA + OVERLAY */}
+        <div className={styles.visualSide}>
           <img
             className={styles.planeta}
             src="./src/assets/planeta.png"
-            alt="Planeta"
+            alt="Planeta L4T"
           />
+          <div className={styles.visualOverlay}>
+            <h2 className={styles.universeText}>L4T UNIVERSE</h2>
+          </div>
         </div>
       </div>
     </div>
