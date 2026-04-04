@@ -20,11 +20,14 @@ export function Login() {
           <img
             className={styles.logo}
             src="./src/assets/L4T_logo.png"
-            alt="Logo"
+            alt="Logo L4T"
           />
-          <h1 className={styles.title}>Login</h1>
-          <Input type="email" />
-          <Input type="password" />
+          <h1 className={styles.title}>Bem-vindo de volta</h1>
+          <p className={styles.subtitle}>Faça login para continuar</p>
+
+          <Input type="email" placeholder="Seu email" />
+          <Input type="password" placeholder="Sua senha" />
+
           <button className={styles.button} onClick={handleLogin}>
             Entrar
           </button>
